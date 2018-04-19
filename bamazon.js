@@ -2,7 +2,7 @@ var inquirer = require('inquirer');
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-    host: "localhost",
+    host: "127.0.0.1",
     port: 3306,
 
     // Your username
@@ -16,6 +16,10 @@ var connection = mysql.createConnection({
 // connect to the mysql server and sql database
 connection.connect(function (err) {
     if (err) throw err;
+    console.log("It works")
     // run the start function after the connection is made to prompt the user
-    start();
+    // start();
 });
+
+// function updateData(product, quantity, productSale, message = "") {
+//     console.log
